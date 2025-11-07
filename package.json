@@ -34,15 +34,17 @@
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
 		"cross-env": "^7.0.3",
 		"luxon": "^3.6.1",
-		"prismjs": "^1.30.0",
-		"zod": "^3.25.67",
 		"markdown-it": "^14.1.0",
 		"markdown-it-attrs": "^4.3.1",
+		"prismjs": "^1.30.0",
+		"zod": "^3.25.67",
 		"zod-validation-error": "^3.5.2"
 	},
 	"dependencies": {
 		"@zachleat/heading-anchors": "^1.0.3",
 		"markdown-it": "^14.1.0",
-		"markdown-it-anchor": "^9.2.0"
+		"markdown-it-anchor": "^9.2.0",
+		"markdown-it-footnote": "^4.0.0",
+		"markdown-it-table-of-contents": "^1.1.0"
 	}
 }

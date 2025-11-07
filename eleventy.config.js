@@ -6,6 +6,9 @@ import yaml from "js-yaml";
 import pluginFilters from "./_config/filters.js";
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
+import markdownItFootnote from "markdown-it-footnote";
+import markdownItTOC from "markdown-it-table-of-contents";
+import markdownItAttrs from "markdown-it-attrs";
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
@@ -29,7 +32,10 @@ export default async function(eleventyConfig) {
 		html: true,
 		breaks: true,
 		linkify: true,
-	});
+	}).use(markdownItFootnote).use(markdownItTOC).use(markdownItAttrs);
+	
+	eleventyConfig.setLibrary("md", md);
+	
 	eleventyConfig.addFilter("md", function (content) {
 		return md.render(content);
 	});
@@ -74,6 +80,7 @@ export default async function(eleventyConfig) {
 	});
 	eleventyConfig.addPlugin(pluginFilters);
 	eleventyConfig.addPlugin(IdAttributePlugin, {
+		checkDuplicates: false
 	});
 	eleventyConfig.addShortcode("currentBuildDate", () => {
 		return (new Date()).toISOString();
