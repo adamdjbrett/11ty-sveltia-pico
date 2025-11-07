@@ -1,7 +1,7 @@
 backend:
   name: github
-  repo: danurbanowicz/eleventy-sveltia-cms-starter
-  branch: master
+  repo: adamdjbrett/11ty-sveltia-pico
+  branch: main
 
 # The folder used to store uploaded images
 media_folder: "public/img"
@@ -11,6 +11,7 @@ collections:
     label: "Blog"
     folder: "content/blog"
     create: true
+    preview: false
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
@@ -23,6 +24,7 @@ collections:
     label: "Projects"
     folder: "content/projects"
     create: true
+    preview: false
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
@@ -33,6 +35,7 @@ collections:
 
   - name: "pages"
     label: "Pages"
+    preview: false
     folder: "content/page"
     create: true
     slug: "{{slug}}"
@@ -44,6 +47,7 @@ collections:
 
   - name: "metadata"
     label: "Metadata"
+    preview: false
     files:
       - file: "_data/metadata.yaml"
         label: "Site Metadata"
