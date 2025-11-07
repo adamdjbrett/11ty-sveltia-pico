@@ -24,13 +24,15 @@ navbar:
      url: /about/
    - nav: Contact Me
      url: https://adamdjbrett.com
+   - nav: Github
+     url: https://github.com/adamdjbrett/11ty-sveltia-pico  
 
 social: 
- github: "https://www.github.com/"
+ github: "https://github.com/adamdjbrett/11ty-sveltia-pico"
  x: "https://www.x.com/"
  instagram: "https://www.instagram.com/"
  linked: "https://www.linkedin.com/"
  discord: "https://www.discord.com/"
- rss: "/rss.xml"
+ rss: "/feed/feed.xml"
 
 
